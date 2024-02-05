@@ -1,0 +1,17 @@
+### Get Rewards for Customer by ID
+GET /rewards/1 HTTP/1.1
+Host: localhost:8081
+
+### Get Rewards for Customer Not Exist
+GET /rewards/999 HTTP/1.1
+Host: localhost:8081
+
+### Get Rewards for Customer by ID and Period
+GET /rewards/period/1?startMonth=2023-01&endMonth=2023-02 HTTP/1.1
+Host: localhost:8081
+Accept: application/json
+
+### Get Rewards for Customer by ID and Invalid Period
+GET /rewards/period/1?startMonth=2023-01&endMonth=2023-13 HTTP/1.1
+Host: localhost:8081
+Accept: application/json
